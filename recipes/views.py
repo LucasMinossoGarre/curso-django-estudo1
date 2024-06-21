@@ -5,8 +5,9 @@ def my_view(request):
     return HttpResponse('teste')
 
 def home(request):
-    return render(request,'recipes/home.html')
+    return render(request,'recipes/home.html', context={
+                  'name':'lucas Garre'})
 
 def contato(request):
-    return HttpResponse('Contato')
+    return render(request,'recipes/contato.html')
 
